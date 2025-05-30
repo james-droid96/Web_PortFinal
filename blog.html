@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #fafafa;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+   body {
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--light-color);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--dark-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color:  var(--secondary-color); 
+            color: white;
+            padding: 1rem 0;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sub-tittle {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .sub-tittle::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .header-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.8rem;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .header-icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 4rem 0;
+        }
+        
+        .blog h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--secondary-color);
+            position: relative;
+        }
+        
+        .blog h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .blog p {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .blog-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .blog-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .blog-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .blog-item h2 {
+            font-size: 1.5rem;
+            margin: 1rem 1.5rem 0.5rem;
+            text-align: left;
+            color: var(--dark-color);
+        }
+        
+        .blog-item p {
+            text-align: left;
+            margin: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .blog-item .btn {
+            margin: 0 1.5rem 1.5rem;
+        }
+       .ojt-gallery {
+    padding: 2rem 0 3rem 0;
+    background: #f7fafd;
+    text-align: center;
+}
+
+.ojt-gallery h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.ojt-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.ojt-images img {
+    width: 300px;
+    max-width: 95vw;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    transition: transform 0.3s;
+}
+
+.ojt-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(44,62,80,0.18);
+}
+
+@media (max-width: 600px) {
+    .ojt-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+        /* Footer Styles */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sub-tittle {
+                font-size: 2rem;
+            }
+            
+            .header-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+            
+            .blog h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .sub-tittle {
+                font-size: 1.8rem;
+            }
+            
+            .blog-list {
+                grid-template-columns: 1fr;
+            }
+        }     
+        /* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.95rem;
+        padding: 0.8rem 0;
+    }
+    footer .container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 0.85rem;
+        padding: 0.6rem 0;
+    }
+    footer .container {
+        padding: 0 5px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-icon">
+            <i class="fas fa-pen-fancy"></i>
+        </div>
+        <h1 class="sub-tittle">My Blog</h1>
+    </header>
+    <section class="blog">
+        <div class="container">
+            <h2>HI! You Are Welcome</h2>
+            <p>Here, I share my thoughts, experiences, and projects. Stay tuned for updates!</p>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <img src="images/Blog_image1.jpg" alt="Blog 1">
+                    <h2>My First Journey</h2>
+                    <p>
+                       My first journey as an Information Technology student at STI College 
+                       Alaminos City was a transformative and enriching experience. 
+                       From the excitement of the first day to the challenges of programming and database management, 
+                       I developed both technical skills and personal growth. Group projects, especially building an inventory system and a task management app, taught me teamwork, problem-solving, and perseverance. 
+                       The unwavering support of my instructors and the strong bond with my classmates created a collaborative and motivating environment. 
+                       Through every challenge and success, I gained confidence, built meaningful friendships, and discovered a passion for technology that fuels my eagerness to continue learning and growing in the field.
+                    </p>
+                </div>
+                <div class="blog-item">
+                    <img src="images/BFP_Certificate.jpeg" alt="Blog 2">
+                    <h2>On the Job Trainning</h2>
+                    <p>My On-the-Job Training at the Bureau of Fire Protection (BFP) in Alaminos City, 
+                        Pangasinan was a transformative experience that 
+                        deepened my understanding of fire safety, emergency response, and public service.
+                        Over 320 hours, I engaged in drills, community outreach, equipment handling, and administrative tasks, all of which taught me valuable technical and life skills. I faced physical and emotional challenges that pushed me out of my comfort zone, but they led to personal growth, resilience, and a stronger work ethic. The experience fostered a deep respect for the firefighting profession, teamwork, and the importance of service. 
+                        Earning my Certificate of Completion on May 14, 2025, marked a proud milestone. 
+                        I now carry forward not only practical knowledge but also a renewed sense of purpose, ready to contribute meaningfully to the safety and wellbeing of others.
+                    </p>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="ojt-gallery">
+    <div class="container">
+        <h2>Academic Gallery</h2>
+        <div class="ojt-images">
+            <img src="images/P1.jpeg" alt=" project 1">
+            <img src="images/p2.jpeg" alt=" project 2">
+            <img src="images/P3.jpeg" alt=" project 3">
+            <img src="images/softwareapp.png" alt=" project 4">
+        </div>
+    </div>
+</section>
+
+<section class="ojt-gallery">
+    <div class="container">
+        <h2>OJT Photo Gallery</h2>
+        <div class="ojt-images">
+            <img src="images/Ojt_im1.jpeg" alt=" OJT 1">
+            <img src="images/Ojt_im2.jpeg" alt=" OJT 2">
+            <img src="images/Ojt_im3.jpeg" alt=" OJT 3">
+            <img src="images/Ojt_im4.jpeg" alt=" OJT 4">
+        </div>
+    </div>
+</section>
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+        </div>
+</body>
+</html>

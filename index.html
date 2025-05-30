@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Official Website Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/49b46903e3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Neog-THRZKlv-l0Dj",
+      });
+   })();
+</script>
+
+
+</head>
+<body>
+
+
+    <!------------Header-------------->  
+    <header id="header">
+        <div class="floating-icons"></div>
+        <div class="container">
+            <nav>
+                <div id="menu-toggle"> &#9776;</div>
+                <ul id="nav-menu">
+                    <li><a href="#header"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+                    <li><a href="#Services"><i class="fa-solid fa-briefcase"></i>Services</a></li>
+                    <li><a href="#portfolio"><i class="fa-solid fa-image"></i>Portfolio</a></li>
+                    <li><a href="#Contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+                    <li><a href="#social-media"><i class="fa-solid fa-share-nodes"></i>Social Media</a></li>
+                    <li><a href="blog.html" target="_blank"><i class="fa-solid fa-blog"></i>Blog</a></li>
+            </nav>    
+            <div class="profile-picture">
+                <img src="images/Dp1.png" class="PD">
+            </div>        
+            <div class="header-text">
+                <h1>Hi! I'm <span>James Po</span> <br> From Philippines</h1>
+                <a href="images/Cv.pdf" class="btn download-cv" download>Download CV</a>
+            </div><br>
+            
+            </div> 
+            </header> 
+            
+            
+    
+
+    <!------------about me-------------->
+    <div id="about" class="about">
+        <div class="container">
+            <h1 class="sub-tittle">About Me</h1>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/userimage.png">
+                </div>
+                <div class="about-col-2">
+                    <p class="title-text">
+                        I'm passionate about creating seamless and engaging user experiences that are both beautiful and functional. 
+                        I believe good design is invisible, and I strive to make technology accessible and enjoyable for everyone.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiences')">Experience</p>
+                        <p class="tab-links" onclick="opentab('educations')">Education</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certificates</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>JAVA, PHYTON, C#, JAVASCRIPT.</li> 
+                            <li><span>Web Development</span><br>HTML, CSS, JS</li>
+                            <li><span>Software Application</span><br>C#</li>
+                            <li><span>Game/App Development</span><br>Android Studio(JAVA)</li>
+                            <li><span>Tools and Platforms</span><br>Git, Visual Studio, NetBeans, Android Studio, VS Code.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiences">
+                        <ul>
+                            <li><span>2019 - 2021</span><br>Sales Promoter @Xenon Mktg Company.</li>
+                            <li><span>2021 - 2022</span><br>Sales Associate @SM City San Fernando Pampanga.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="educations">
+                        <ul>
+                            <li><span>2023 - 2025</span><br>Tertiary @STI College Alaminos City Pangasinan.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>2016</span><br>Tesda Certificate @Manantan Institute. <br>Automotive Servicing NC1.</li>
+                            <li><span>2020 - 2021</span><br>Tesda Certificate @Barlo Technical Institute. <br>Gmaw Welder NC2.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------services-------------->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-tittle">My Services</h1><br>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        I design and develop websites that are visually appealing, user-friendly, and optimized for search engines.
+                    </p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Application Developing</h2>
+                    <p>
+                        I design user interfaces that are intuitive and easy to use, creating a seamless experience for your users.
+                    </p>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Game Developer</h2>
+                    <p>
+                        I develop games that are engaging and fun, using the latest technologies to create immersive experiences.
+                    </p>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-uncharted"></i>
+                    <h2>Software Application</h2>
+                    <p>
+                        I develop software applications that are tailored to your specific needs, helping you achieve your business goals.
+                    </p>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!------------portfolio-------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-tittle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Designing.jpg">
+                    <div class="layer">
+                        <h3>Web Design</h3>
+                        <p>Web design is not just about creating pretty layouts. 
+                         Its about understanding the marketing challenge behind your business. </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bg.png">
+                    <div class="layer">
+                        <h3>App Development</h3>
+                        <p>
+                            App development is the process of creating a computer program or a set of programs to perform the different tasks that a business requires.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Game.png">
+                    <div class="layer">
+                        <h3>Game Development</h3>
+                        <p>
+                            Game development is the process of creating a game for a computer, mobile device, or other gaming platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/sql.png">
+                    <div class="layer">
+                        <h3>SQL</h3>
+                        <p>
+                            SQL (Structured Query Language) is a standard programming language for managing and manipulating databases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+    <!------------contact-------------->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-tittle">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i>jamesmarcha48@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0961-319-9357</p>
+                    <p><i class="fa-solid fa-location-dot"></i>Alaminos City, Pangasinan, Philippines</p>
+                <div class="contact-right">
+                    <form id="contactForm">
+                        <input type="text" name="NAME" placeholder="Your Name" required/>
+                        <input type="email" name="EMAIL" placeholder="Your Email" required/>
+                        <textarea name="MESSAGE" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn submit-btn" onclick="sendEmail(event)">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!--------------social media-------------->
+   
+   <section id="social-media" class="social-media">
+    <h1 class="sub-tittle">Social Media</h1>
+    <p>Connect with me on social media platforms to stay updated with my latest projects and activities.</p> 
+    <div class="social-icons">
+        <h1><span><i class="fa-solid fa-share-nodes"></i></span></h1>
+        <a href="https://www.facebook.com/james.marcha"><i class="fa-brands fa-facebook"></i></a>
+        <a href="mailto:jamespo1896@gmail.com"><i class="fa-brands fa-google"></i></a>
+        <a href="https://www.threads.com/@marcha_james0?xmt=AQGzTAkL1iXJxfWVZrh2dVG-y62Ucw3TGDm3lu58nlfgwrs"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/james-po-a47961285"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/james-droid96"><i class="fa-brands fa-github"></i></a>
+    </div>
+</section>
+
+
+    
+    <!------------footer-------------->
+    
+    <footer id="footer">
+        <div class="footer-content"><br>
+            <p>&copy; 2025 James Po. All Rights Reserved.</p>
+            <div id="footer-toggle" onclick="toggleFooter()"></div>
+        </div>
+    </footer>
+    
+   
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
